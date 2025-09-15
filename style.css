@@ -61,9 +61,12 @@ body {
   padding: 10px 20px;
   margin-top: 10px;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .social-icons img {
+  border-radius: 6px; 
+ 
   height: 30px;
   margin: 10px;
 }
