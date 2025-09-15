@@ -303,6 +303,48 @@
     background: #00695c;
   }
   
+  .custom-alert {
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;               /* Make sure it is on top of other content */
+    align-items: center;         /* Center content vertically */
+    justify-content: center;
+  }
+
+  /* Alert Content */
+.alert-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Alert Message */
+  #alert-message {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  /* Close Button */
+  #close-alert {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #close-alert:hover {
+    background-color: #45a049;
+  }
+
   /* =========================
      ABOUT US PAGE
      ========================= */

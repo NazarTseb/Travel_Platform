@@ -19,6 +19,12 @@
     </ul>
   </nav>
   
+  <div id="custom-alert" class="custom-alert">
+    <div class="alert-content">
+      <p id="alert-message">This is a custom alert message!</p>
+      <button id="close-alert">OK</button>
+    </div>
+</div>
     <div class="contact-container">
       <div class="contact-card">
         <h1>Contact Us</h1>
@@ -40,10 +46,30 @@
         </form>
       </div>
     </div>
+    <div id="custom-alert" class="custom-alert">
+        <div class="alert-content">
+          <p id="alert-message">This is a custom alert message!</p>
+          <button id="close-alert">OK</button>
+        </div>
+    </div>
     <script>
         document.getElementById("contactForm").addEventListener("submit", function(event) {
-          event.preventDefault();
-          alert("Thank you for contacting us. Please wait for us to contact you about your case.");
+          event.preventDefault();  // Prevent the default form submission
+    
+          const alertBox = document.getElementById('custom-alert');
+          const alertMessage = document.getElementById('alert-message');
+          const closeButton = document.getElementById('close-alert');
+    
+          // Set a success message for the alert box
+          alertMessage.innerText = "Your message has been successfully sent!";
+    
+          // Display the custom alert
+          alertBox.style.display = 'flex';
+    
+          // Close the alert when the button is clicked
+          closeButton.onclick = function() {
+            alertBox.style.display = 'none';
+          };
         });
     </script>
   </body>
