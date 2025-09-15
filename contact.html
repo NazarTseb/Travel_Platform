@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - Explore Destinations</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- Navbar (without search) -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="./logo.png" alt="Travel Logo" class="logo-img">
+      <span class="site-name">Explore Destinations</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="./travel_recommendation.html">Home</a></li>
+      <li><a href="./about.html">About Us</a></li>
+      <li><a href="./contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <main class="content">
+    <h1>Contact Us</h1>
+    <form id="contactForm">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+      </div>
+      <div>
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      alert("Thank you for contacting us. Please wait for us to contact you about your case.");
+    });
+  </script>
+</body>
+</html>
