@@ -34,7 +34,7 @@ document.getElementById("btnSearch").addEventListener("click", () => {
   }
 
   if (results.length === 0) {
-    resultsContainer.innerHTML = "<p>No results found.</p>";
+    resultsContainer.innerHTML = "<p style=\"text-align: center; color: white; font-size: 40px;\">No results found.</p>";
   } else {
     results.forEach(place => {
       const card = document.createElement("div");
@@ -47,6 +47,11 @@ document.getElementById("btnSearch").addEventListener("click", () => {
       resultsContainer.appendChild(card);
     });
   }
+
+  resultsContainer.scrollIntoView({
+    behavior: "smooth",  // Smooth scroll effect
+    block: "start"       // Align to the top of the page
+  });
 });
 
 // Reset button logic
